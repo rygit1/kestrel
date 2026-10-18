@@ -1,0 +1,8 @@
+numpy==2.3.5
+onnx==1.23.2
+onnxruntime==1.30.0
+onnxslim==0.1.97
+opencv-python==4.14.0.94
+pyserial==3.5
+torch==2.14.1
+ultralytics==8.4.174
