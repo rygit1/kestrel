@@ -4,7 +4,7 @@ by Ryan Yousefi, for the 2026 Congressional App Challenge (California District 3
 
 Kestrel is a camera that guesses where a car is going and warns kids before it gets there.
 
-![Crash map of District 32](map/district-32-crash-map.jpg)
+[![My Crash Atlas website: crashes where a car hit someone walking, by neighborhood in District 32](map/district-32-crash-atlas.jpg)](https://kestrel-crash-atlas.vercel.app)
 
 Why I built it: in the City of LA part of my district, crashes that killed or badly hurt someone walking went from 61 in 2019 to 115 in 2024 (LAPD crash reports). Explore the numbers on my website, the Crash Atlas: https://kestrel-crash-atlas.vercel.app
 
@@ -63,7 +63,7 @@ The full, line-by-line AI list is in my App Challenge entry.
 - `sounds/honk.wav`: the honk. If it is missing, Kestrel makes a new one by itself.
 - `settings.json`: the numbers for my own setup, like where the circle sits in the camera picture and how far each gate arm turns. On a new setup you place the circle again with the C key.
 - `requirements.txt`: the Python add-ons Kestrel needs.
-- `map/district-32-crash-map.jpg`: my crash map of District 32 (below).
+- `map/district-32-crash-atlas.jpg`: a picture of my Crash Atlas website's map (at the top).
 - `website/index.html`: the Crash Atlas website, the same page that is live at the link below.
 
 ## How to run it
