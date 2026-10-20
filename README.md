@@ -47,7 +47,7 @@ I used AI, and here is exactly where. Claude is Anthropic's AI.
 - **In the video:** Claude helped word my script from my own words and edited the video. Higgsfield made the reenactments and the bus idea shot (both labeled AI on screen), ElevenLabs the music and sound effects, ChatGPT the logo, and Whisper the captions.
 - **Outside tools Kestrel uses:** OpenCV, Ultralytics YOLO26, PyTorch, ONNX Runtime and pyserial.
 
-The full, line-by-line AI list is in my App Challenge entry.
+The full, detailed list of every way I used AI is in [AI-USE.md](AI-USE.md).
 
 ## What each file does
 
