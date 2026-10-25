@@ -1,3 +1,5 @@
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="media/kestrel-logo-white.png"><img src="media/kestrel-logo-black.png" alt="The Kestrel falcon logo" width="220"></picture></p>
+
 # Kestrel
 
 by Ryan Yousefi, for the 2026 Congressional App Challenge (California District 32)
@@ -38,6 +40,8 @@ I rolled the real toy car 20 times on the real road, using my code. Before count
 - Kids saved: 10 of 10. Every time, the gate came down and stopped the car.
 - Misses left alone: 9 of 10. Kestrel kept the gate up and showed how close the car came.
 - The 10th miss does not count as a win. Kestrel saw the car once, lost it while it was moving, and only found it again after it stopped. The gate stayed up, but only because Kestrel lost the car, not because it guessed right.
+
+![Kestrel on real traffic: a drawn pretend kid in the crosswalk, each car's path turning red the moment my code warns, plates blurred](media/street-test.gif)
 
 **Street test (Oct 24 2026).** I passed the FAA's TRUST drone safety test and filmed 10 minutes of real traffic at a crosswalk from above. My decision code ran unchanged: it was tuned on the first 4 minutes and graded once on the last 6, which it had never seen. It found 59 of the 63 cars counted crossing, and with a pretend kid placed on real traffic in the crosswalk, it warned for all 24 cars that drove through the kid's spot, every one at least a full second early. The footage stays private. The test code is in `street/`.
 
