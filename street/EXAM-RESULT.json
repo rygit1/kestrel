@@ -1,0 +1,131 @@
+{
+ "when_frozen": 1792884110.1099484,
+ "cars_found": {
+  "total_found": 59,
+  "total_hand_counted": 63,
+  "total_extra": 3,
+  "by_stretch": {
+   "exam_A": {
+    "found": 19,
+    "hand_counted": 21,
+    "extra": 2
+   },
+   "exam_B": {
+    "found": 3,
+    "hand_counted": 3,
+    "extra": 0
+   },
+   "exam_C": {
+    "found": 18,
+    "hand_counted": 19,
+    "extra": 1
+   },
+   "exam_D": {
+    "found": 19,
+    "hand_counted": 20,
+    "extra": 0
+   }
+  }
+ },
+ "one_second_guess": {
+  "n": 15930,
+  "within_1m": 0.409353421217828,
+  "median_m": 1.2459929954649387
+ },
+ "one_second_guess_moving": {
+  "n": 12144,
+  "within_1m": 0.2901844532279315,
+  "median_m": 1.584975976260992,
+  "within_2m": 0.6146245059288538
+ },
+ "pretend_kids": {
+  "kid1_toward_camera": {
+   "went_through": 24,
+   "saved": 24,
+   "warned_late": 0,
+   "never_warned": 0,
+   "near_misses": 31,
+   "near_left_alone": 14,
+   "far_cars": 1621,
+   "far_left_alone": 1621,
+   "leads": [
+    30.58,
+    1.55,
+    1.46,
+    2.2,
+    14.95,
+    1.23,
+    1.35,
+    1.29,
+    1.63,
+    1.36,
+    1.8,
+    1.31,
+    1.36,
+    1.53,
+    1.67,
+    3.16,
+    1.49,
+    1.55,
+    1.17,
+    2.57,
+    1.81,
+    1.3,
+    1.33,
+    1.53
+   ]
+  },
+  "kid2_blind_side": {
+   "went_through": 37,
+   "saved": 1,
+   "warned_late": 36,
+   "never_warned": 0,
+   "near_misses": 52,
+   "near_left_alone": 12,
+   "far_cars": 1587,
+   "far_left_alone": 1587,
+   "leads": [
+    0.61,
+    0.61,
+    0.62,
+    0.6,
+    0.53,
+    0.53,
+    0.42,
+    0.46,
+    0.49,
+    0.34,
+    0.35,
+    0.45,
+    0.46,
+    0.51,
+    0.57,
+    0.52,
+    0.56,
+    0.55,
+    0.79,
+    0.59,
+    0.67,
+    0.58,
+    0.64,
+    0.6,
+    0.58,
+    0.56,
+    0.55,
+    0.44,
+    0.44,
+    1.13,
+    0.79,
+    0.98,
+    0.54,
+    0.58,
+    0.83,
+    0.85,
+    0.49
+   ]
+  }
+ },
+ "followed_vehicles": 1676,
+ "frames": 10984,
+ "lined_up_frames": 10984
+}

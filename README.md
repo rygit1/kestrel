@@ -39,6 +39,8 @@ I rolled the real toy car 20 times on the real road, using my code. Before count
 - Misses left alone: 9 of 10. Kestrel kept the gate up and showed how close the car came.
 - The 10th miss does not count as a win. Kestrel saw the car once, lost it while it was moving, and only found it again after it stopped. The gate stayed up, but only because Kestrel lost the car, not because it guessed right.
 
+**Street test (Oct 24 2026).** I passed the FAA's TRUST drone safety test and filmed 10 minutes of real traffic at a crosswalk from above. My decision code ran unchanged: it was tuned on the first 4 minutes and graded once on the last 6, which it had never seen. It found 59 of the 63 cars counted crossing, and with a pretend kid placed on real traffic in the crosswalk, it warned for all 24 cars that drove through the kid's spot, every one at least a full second early. The footage stays private. The test code is in `street/`.
+
 ## AI help
 
 I used AI, and here is exactly where. Claude is Anthropic's AI.

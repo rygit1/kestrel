@@ -1,0 +1,35 @@
+{
+ "settings": {
+  "model": "yolo26m.pt@1280",
+  "stride": 1,
+  "point": 0.0,
+  "conf_hi": 0.4,
+  "conf_lo": 0.15,
+  "gate_m": 4.0,
+  "lost_s": 0.5,
+  "track_after": 3,
+  "nms_iou": 0.6,
+  "smooth": 1
+ },
+ "kids": {
+  "kid1_toward_camera": [
+   23.175,
+   3.72,
+   1.5
+  ],
+  "kid2_blind_side": [
+   23.175,
+   14.69,
+   1.5
+  ]
+ },
+ "notes": "Tuned on minutes 0 to 4 only. Tuning scores: cars found 26 of 26 hand-counted (0 extra); 1-second guess on moving cars within 1 m 33.8%, within 2 m 68.0%; kid 1 saved 17 of 18, near misses left alone 8 of 18; kid 2 (blind side) saved 0 of 17 (warned 0.46 to 0.95 s ahead). Settings: the medium ready-made car finder, 30 spots a second, the bottom of the car's box, Ryan's code unchanged, gate_seconds 0.3, kid radius 1.5 m.",
+ "code": {
+  "street_kestrel.py": "08890096152f3407e9e9eadb8ed897abdcc4307f1bf06905614f686ba73fdd9a",
+  "ground.py": "a4e1c3c6de9419e14f283bff7e8cca7bf7757815168d63ddbaf93734a0bb1d61",
+  "register.py": "dbdaff5508fa96936f234b82af74664feb2f994e3495cc63334a0589d779047d",
+  "cache_dets.py": "c5a81f65be3e193b02605bf1e665dbc415116f9964292ea427204294cb62809e",
+  "run_exam.py": "7be954e8475567b755ec5a3c20f65452914d18fe3fda1d6c7c459a4cef78edc2",
+  "../ryan_code.py": "9b6fa45353b80c98558f749258310d48e4ff68cc953c94b5d653d8f18f86e7ee"
+ }
+}

@@ -92,6 +92,14 @@ Every AI piece is tagged on screen while it shows. The video is not Kestrel's co
 
 **ChatGPT's review.** I also asked ChatGPT to review an early draft of the video. Claude checked its notes against the real files before I decided what to use.
 
+## The street test (Oct 24 2026)
+
+- What I did: passed the FAA's TRUST drone safety test, picked the crosswalk from its crash history, flew my DJI Neo 2 and filmed 10 minutes of real traffic, and checked one 30-second stretch of the car count by hand (21 of 21 cars).
+- Written by Claude: all of the street test code in `street/`: lining up every frame of the drifting drone video with the road, turning the picture into a flat map in meters (from the crosswalk stripes and the drone's own height reading), finding and following real cars with a ready-made car finder (Ultralytics YOLO26, trained by Ultralytics on everyday photos, not retrained by me), the pretend kid, and the scoring. Claude also picked the settings, on the first 4 minutes only, and locked them before the last 6 minutes were graded.
+- Claude helpers counted the cars by eye from picture sheets to make the answer key (2 helpers per stretch, working alone).
+- My decision code (`ryan_code.py`) ran unchanged. It makes every warning decision in the street test.
+- The video (v7): Claude drew the street shot (the pretend kid figure, each car's path, the blurred plates, the "x.x s EARLY" tags and the 24 of 24 card) and edited it in, in place of my timers and speed cameras line. The new line about the street test is my own voice.
+
 ## The cover picture and logo
 
 - The cover picture and the Kestrel falcon logo were made by ChatGPT's picture maker from my photos of Kestrel, with a prompt Claude wrote at my ask.
