@@ -109,7 +109,7 @@ Every AI piece is tagged on screen while it shows. The video is not Kestrel's co
 
 ## The written answers and this page
 
-- The six written answers in my entry: Claude asked me interview questions and lightly edited my spoken answers into writing; the ideas and facts are mine.
+- The six written answers in my entry: Claude asked me interview questions, edited my spoken answers into writing, added a few lines that I checked and approved, and supplied the street test numbers from its test code. The ideas are mine.
 - This code page's README and this list were written by Claude from my notes.
 
 ## Outside tools Kestrel uses

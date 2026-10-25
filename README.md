@@ -20,36 +20,36 @@ The camera sits on a Mac. The Mac runs the Python program, and a small ESP32 boa
 
 ## What I did
 
-- **The idea.** Once, getting dropped off at a bus stop, I couldn't see a car coming from behind the bus and almost got hit. My bus driver honked. Kestrel is that honk, made automatic, for kids at bus stops and school pickup lines.
+- **The idea.** This fall, stepping off my school bus, I couldn't see a car coming and almost got hit. My bus driver saw it from up high and honked just in time. Kestrel is that honk, made automatic, for kids at bus stops and school pickup lines.
 - **The design.** A gate that drops across the road like a parking-lot exit arm. A warning mode for places a gate can't go: a red light that faces the driver and a honk for the kid. Two gate arms that close from both sides. And my rule: any car headed through the gate drops the arms.
 - **The build.** I built the test road and the machine: the white board road, the ramp, the LEGO kids, the two gate arms, the traffic light, the webcam hung above looking straight down, and the wiring from the motors and the light to the ESP32 board (Claude walked me through the wires one at a time). I found all four gate angles myself.
 - **The decision code.** I typed `ryan_code.py` line by line. It is the part that decides:
   1. Is the car inside the circle right now?
   2. Where is the car going? I measure speed from 5 spots back instead of 1, because every spot has a small error and looking further back keeps the speed steady.
-  3. Drop now or wait? I tried a safety margin of 0.2 seconds, then 0.4, and the gate still looked late, so I went to 1.0 second.
+  3. Drop now or wait? I tried a safety margin of 0.2 seconds, then 0.4, and the gate still looked late, so I kept raising it until 1.0 second.
   4. How close did a car that missed come?
 
-  Every other file only asks `ryan_code.py`. None of them work out where the car is going or whether it is in the circle.
+  Every other file only asks `ryan_code.py`. None of them work out where the car is going or whether it is in the circle. (The street test's grader also checks whether a car really entered the circle, to build its answer key.)
 - **Teaching it my car.** A ready-made AI couldn't find my toy car from above, so I retrained one on 240 photos of my car and 90 of the empty board.
-- **The test.** I set the rule before rolling, then ran and filmed 20 rolls on the real road (results below).
+- **The test.** I set the counting rule first, then ran and filmed the test rolls on the real road (results below).
 - **The map and the website.** I picked what they show: every time a car hit someone walking in the City of LA part of District 32, from LAPD's public crash reports.
 - **The video.** I filmed the test and myself, and the narration is my own voice.
 
 ## The test
 
-I rolled the real toy car 20 times on the real road, using my code. Before counting, I set the rule: the first 10 rolls aimed at the kids and the first 10 aimed to miss, and every failure stays in the count.
+I rolled the real toy car on the real road, using my code, and counted the first 20 by a rule I set before counting: the first 10 rolls aimed at the kids and the first 10 aimed to miss, and every failure stays in the count.
 
 - Kids saved: 10 of 10. Every time, the gate came down and stopped the car.
 - Misses left alone: 9 of 10. Kestrel kept the gate up and showed how close the car came.
 - The 10th miss does not count as a win. Kestrel saw the car once, lost it while it was moving, and only found it again after it stopped. The gate stayed up, but only because Kestrel lost the car, not because it guessed right.
 
-**Street test (Oct 24 2026).** I passed the FAA's TRUST drone safety test and filmed 10 minutes of real traffic at a crosswalk from above. My decision code ran unchanged: it was tuned on the first 4 minutes and graded once on the last 6, which it had never seen. It found 59 of the 63 cars counted crossing, and with a pretend kid placed on real traffic in the crosswalk, it warned for all 24 cars that drove through the kid's spot, every one at least a full second early. The footage stays private. The test code is in `street/`.
+**Street test (Oct 24 2026).** I passed the FAA's TRUST drone safety test and filmed 10 minutes of real traffic at a crosswalk from above. My decision code ran unchanged. Claude wrote the street test code and picked its settings on the first 4 minutes only; then Kestrel was graded once on the last 6, which it had never seen. It found 59 of the 63 cars people counted crossing by hand, and with a pretend kid in the busiest lane coming toward the camera, it warned for all 24 cars that drove through the kid's spot, every one at least a full second early. A second pretend kid, where cars come from behind the drone, got a full second of warning for only 1 of 37 cars, because those cars come into view only about 1.3 seconds before the crosswalk: a real Kestrel camera has to look up the road. The full 10 minutes stay private; the clip at the top is a short piece of it with plates blurred. The test code is in `street/`.
 
 ## AI help
 
 I used AI, and here is exactly where. Claude is Anthropic's AI.
 
-- **Written by Claude:** the support code around my decision code (finding the car on camera, remembering its path, the screen, the log, the honk, moving the board's motors and light, the practice road, the self-tests, and the code that trains the car finder), the code that draws my map and website, and this README, from my notes.
+- **Written by Claude:** the support code around my decision code (finding the car on camera, remembering its path, the screen, the log, the honk, moving the board's motors and light, the practice road, the self-tests, and the code that trains the car finder, the street test code in `street/` and the street clip at the top), the code that draws my map and website, and this README, from my notes.
 - **In the video:** Claude helped word my script from my own words and edited the video. Higgsfield made the reenactments and the bus idea shot (both labeled AI on screen), ElevenLabs the music and sound effects, ChatGPT the logo, and Whisper the captions.
 - **Outside tools Kestrel uses:** OpenCV, Ultralytics YOLO26, PyTorch, ONNX Runtime and pyserial.
 
@@ -70,7 +70,7 @@ The full, detailed list of every way I used AI is in [AI-USE.md](AI-USE.md).
 - `settings.json`: the numbers for my own setup, like where the circle sits in the camera picture and how far each gate arm turns. On a new setup you place the circle again with the C key.
 - `requirements.txt`: the Python add-ons Kestrel needs.
 - `map/district-32-crash-atlas.jpg`: a picture of my Crash Atlas website's map (at the top).
-- `website/index.html`: the Crash Atlas website, the same page that is live at the link below.
+- `website/index.html`: the Crash Atlas website, the same page that is live at the link at the top.
 
 ## How to run it
 
